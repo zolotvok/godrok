@@ -25,24 +25,24 @@ Console.WriteLine("3.feladat");
 Console.WriteLine("Az érintetlen terület aránya "+Math.Round(percentage,2)+"%.");
 bool idk=false;
 int asd=0;
-//string[] geci = {"","","","","","","","","","","","","","","","","","","","","","","","",""};
+//string[] a = {"","","","","","","","","","","","","","","","","","","","","","","","",""};
 int sad=0;
 for (int i = 0;i<list.Length;i++){
 if(list[i]!="0"){idk=true;}
 if((list[i]=="0")&&(idk==true)){sad++;idk=false;}
 }
 
-string [] geci = new string[sad];
+string [] a = new string[sad];
 for(int i = 0; i<list.Length;i++){
-if(list[i]!="0"){geci[asd]+=list[i];;idk=true;}
+if(list[i]!="0"){a[asd]+=list[i];;idk=true;}
 if(list[i]=="0"){if(idk==true){asd+=1;}idk=false;}
 }
-File.WriteAllLines("/home/zolotvok/godrok.txt",geci);
+File.WriteAllLines("/home/zolotvok/godrok.txt",a);
 
 Console.WriteLine("5. feladat");
-int anyád=0;
-foreach(var fasz in geci){
-if (fasz !=""){anyád+=1;}
+int b=0;
+foreach(var c in a){
+if (c !=""){b+=1;}
 
 }
 Console.WriteLine("A gödrök száma: "+asd);
